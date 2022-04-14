@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/icon-location.svg">
+</head>
+<body>
+    <header>
+        <h1>IP Adress Tracker</h1>
+        <form id="searchIP">
+            <input type="text" required placeholder="Search for any IP adress or domain" id="search">
+            <button type="submit" id="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+            </button>
+        </form>
+    </header>
+    <div id="results">
+            <h3 id="init">Please enter your IP address</h3>
+            <h3 id="error">Please enter a valid IP adress !</h3>
+            <ul id="info_list">
+                <li id="ip"><h5>IP address</h5><h2>192.168.174.101</h2></li>
+                <li id="location"><h5>Location</h5><h2>Broklyn,NY 10001</h2></li>
+                <li id="timezone"><h5>Timezone</h5><h2>UTC -05:00</h2></li>
+                <li id="isp"><h5>ISP</h5><h2>SpaceX Starlink</h2></li>
+            </ul>
+    </div>
+    <div id="map">
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

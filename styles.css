@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    background-image: url('assets/pattern-bg.png');
+    height: 240px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-weight: 500;
+    padding: 26px 0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search {
+    width: 500px;
+    padding: 1rem;
+    height: 50px !important;
+    border-radius: 15px 0 0 15px;
+    border: none;
+}
+#search:focus{
+    outline: none;
+}
+
+#submit {
+    background-color: hsl(0, 0%, 17%);
+    padding: 1rem;
+    height: 50px !important;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: hsl(0, 0%, 25%);
+}
+
+#results {
+    width: 75%;
+    margin: auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 3px 10px 30px hsla(0, 0%, 17%, 0.1);
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#info_list {
+    display: none;
+    align-items: flex-start;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#results #error {
+    display: none;
+    color: rgb(226, 55, 55);
+}
+
+#results #init {
+    display: block;
+}
+
+#results h5 {
+    color: hsl(0, 0%, 59%);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+#results h2 {
+    color: hsl(0, 0%, 17%);
+    margin-top: 8px;
+    font-weight: 500;
+    overflow: auto;
+}
+
+#results li {
+    width: 22%;
+    /* border-right: 1px solid hsl(0, 0%, 80%); */
+    padding-right: 10px;
+    position: relative;
+}
+#results li::after {
+    content: '';
+    height: 150px;
+    width: 1px;
+    color: hsl(0, 0%, 80%);
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+#results #isp {
+    border-right: none;
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+    z-index: -1;
+    /* display: none; */
+}
+
+body {
+    background-color: burlywood;
+}
+
+@media (max-width: 660px) {
+    #results {
+        width: 80%;
+        margin: auto;
+        padding: 1.2rem;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 3px 10px 30px hsla(0, 0%, 17%, 0.1);
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    
+    #info_list {
+        display: none;
+        list-style: none;
+    }
+
+    #results li {
+        width: 100%;
+        padding: 10px 0;
+        border: none;
+    }
+
+    form {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #results h3 {
+        display: none;
+    }
+
+    #results h5 {
+        color: hsl(0, 0%, 59%);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08rem;
+        font-size: 0.6rem;
+    }
+
+    #results h2 {
+        color: hsl(0, 0%, 17%);
+        margin-top: 5px;
+        font-weight: 500;
+        overflow: auto;
+        font-size: 1.1rem;
+    }
+
+    header h1 {
+        color: white;
+        font-weight: 500;
+        padding: 22px 0;
+        font-size: 1.4rem;
+    }
+}
+
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Gray: hsl(0, 0%, 17%)
+- Dark Gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (text input): 18px
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 400, 500, 700 */
