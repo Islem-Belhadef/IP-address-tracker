@@ -1,2 +1,2 @@
 # IP-address-tracker
-A simple, working, responsive website made from Front-end Mentor challenges.
+A simple responsive website made from Front-end Mentor challenges, that can help you find location and many other informations using an IP address tracker API.
